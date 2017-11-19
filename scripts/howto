@@ -1,0 +1,18 @@
+## basic recording
+sox -t alsa default $FILE.wav
+
+## recording with noise gate. Starts on 5% noisier event and stops
+sox -t alsa default  $FILE.wav silence 1 0.1 5% 1 1.0 5%
+
+## resampling / rate
+sox $FILE.wav -r {1,2}k -o $FILEMOD.wav
+
+## produce spectogram file
+sox $FILE.wav -n spectrogrami -o $FILE.png
+
+## produce .dat file
+sox $FILE.wav $FILE.dat
+
+## show stats
+sox $FILE.wav -n stats
+
