@@ -12,4 +12,4 @@ FILE=$name.$(date "+%F").wav
 echo "Recording starts when silence is interrupted. Shuts down on silence restored."
 echo "Write to file:"
 echo $FILE
-sox -t alsa default  $FILE silence 1 0.1 3% 1 1.0 3%
+sox -t alsa default  ../audio/$FILE silence 1 0.1 3% 1 1.0 3%
