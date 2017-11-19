@@ -1,0 +1,5 @@
+1. sox audio.wav audio.dat
+2. remove header lines from audio.dat
+3. gnuplot audio.gpi
+4. display audio.png
+
